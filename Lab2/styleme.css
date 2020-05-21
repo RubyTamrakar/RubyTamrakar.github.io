@@ -1,0 +1,23 @@
+body{
+    background-color:mistyrose;
+}
+    
+h1{
+    color:red;
+    text-align: center;
+    font:normal bold 30px "Comic sans"
+}
+
+
+#One{
+    color: red;
+}
+
+.two{
+    color:yellowgreen;
+    font:italic bold 10px "Comic sans"
+}
+ h2{
+     color: mediumvioletred;
+ }
+
