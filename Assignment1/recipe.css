@@ -32,6 +32,16 @@ h2{
     text-align: left;
 
 }
-section {
+.comment {
+    
+    list-style: none;
+    font-style: italic;
+}
+
+.comment> li {
     background-color: #ffffa8;
+    margin-bottom: 10px;
+
+
+
 }
