@@ -1,0 +1,47 @@
+body {
+    font-family: Arial;
+    font-size: 17px;
+    background-color: #ecc5c0;
+}
+
+h1 {
+    color: maroon;
+    margin-bottom: unset;
+}
+
+div {
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: maroon;
+    color: gainsboro;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 200px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+label.required {
+    color: red;
+}
+
+label span {
+    color: maroon
+}
+
+::placeholder {
+    color: gainsboro;
+}
+
+.validators {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    opacity: 0.25;
+}
