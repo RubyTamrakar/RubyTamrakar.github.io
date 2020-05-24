@@ -26,10 +26,6 @@ div {
     font-size: 17px;
 }
 
-label.required {
-    color: red;
-}
-
 label span {
     color: maroon
 }
