@@ -1,0 +1,42 @@
+                .nav {
+                background-color: maroon;
+            }
+            
+            .nav>button:hover {
+                color: grey;
+            }
+            
+            .Details {
+                background-color: lightcyan;
+                margin: 15px;
+            }
+            
+            table {
+                margin: 10px;
+                border-top: 2px solid red;
+            }
+            
+            span {
+                padding: 10px;
+            }
+            
+            tr:nth-child(odd) {
+                background-color: lightgray;
+            }
+            
+            .top a:hover {
+                background-color: gray;
+                caption {
+                    text-align: left;
+                    font-weight: bold;
+                    font-style: italic;
+                    display: table-footer-group;
+                }
+                @media (max-width: 600px) {
+                    .nav {
+                        flex-direction: column-reverse;
+                    }
+                    .col-25 {
+                        margin-bottom: 20px;
+                    }
+                }
