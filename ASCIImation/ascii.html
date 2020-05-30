@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ASCIImation</title>
+    <link href="ascii.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>CS472:ASCII Animation Viewer</h1>
+    <textarea rows="20" columns="80" id="myTextArea"></textarea>
+
+    <div class="controls">
+        <fieldset>
+            <legend>Play Controls</legend>
+            <button type="button" id="startButton">Start</button>
+            <button type="button" id="stopButton">Stop</button>
+        </fieldset>
+        <fieldset>
+            <legend>Animation</legend>
+            <select name="Animation" id="animType">
+                <option  value= "Blank">Blank</option>
+                <option  value= "Exercise">Exercise</option>
+                <option  value= "Juggler">Juggler</option>
+                <option  value= "Bike">Bike</option>
+                <option  value= "Dive">Dive</option>
+                <option  value= "Custom">Custom</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Size</legend>
+            <select name="size" id="animSize">
+            <option value="Tiny" class="tiny">Tiny</option>
+            <option value="Small" class="small">Small</option>
+            <option value="Medium"class="medium" selected>Medium</option>
+            <option value="Large"class="large">Large</option>
+            <option value="XL"class="xl">Extra Large</option>
+            <option value="XXL" class="xxl">XXL</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Speed:</legend>
+            <input type="checkbox" id="animSpeed" />Turbo
+        </fieldset>
+    </div>
+
+    <script src="ascii.js"></script>
+    <script src="animations.js"></script>
+
+    <div class="validators">
+        <a href="https://validator.w3.org/check/referer"><img src="w3c-html.png" alt="Valid HTML5"></a> <br>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="w3c-css.png" alt="Valid CSS"></a>
+    </div>
+
+    <div class="validators">
+        <a href="https://validator.w3.org/check/referer"><img src="w3c-html.png" alt="Valid HTML5"></a> <br>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="w3c-css.png" alt="Valid CSS"></a>
+    </div>
+</body>
+
+</html>
