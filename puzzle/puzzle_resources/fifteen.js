@@ -2,27 +2,68 @@ window.onload =
     (function() {
         let puzzleArea = document.getElementById("puzzlearea");
         let piece = document.getElementsByClassName("puzzlepiece");
+        let emptyTile = [3, 3];
+        let matrix = [];
+
+        function removeHoverPiece() {
+            for (let i = 0; i < piece.length; i++) {
+                piece[i].classList.remove("movablepiece");
+            }
+        }
+
+        function addHoverPiece() {
+            let [row, col] = emptyTile;
+
+            let top = row > 0 ? [row - 1, col] : null;
+            let bottom = row < 3 ? [row + 1, col] : null;
+            let left = col > 0 ? [row, col - 1] : null;
+            let right = col < 3 ? [row, col + 1] : null;
+
+            if (top) {
+                [row, col] = top;
+                matrix[row][col].classList.add('movablepiece');
+            }
+
+            if (bottom) {
+                [row, col] = bottom;
+                matrix[row][col].classList.add('movablepiece');
+            }
+
+            if (left) {
+                [row, col] = left;
+                matrix[row][col].classList.add('movablepiece');
+            }
+
+            if (right) {
+                [row, col] = right;
+                matrix[row][col].classList.add('movablepiece');
+            }
+
+        }
 
         for (let i = 0; i < piece.length; i++) {
             piece[i].addEventListener("click", findNeighborElem);
         }
 
-        let matrix = [];
+
+        let index = 0;
         for (let i = 0; i < Math.ceil((piece.length) / 4); i++) {
-            let index = 0;
             let row = [];
             for (let j = 0; j < 4; j++) {
-                piece[index].dataset.row = i;
-                piece[index].dataset.column = j;
-                row.push(piece[index]);
+                if (piece[index]) {
+                    piece[index].dataset.row = i;
+                    piece[index].dataset.column = j;
+                    row.push(piece[index]);
+                }
                 index++;
             }
             matrix.push(row);
         }
 
-        let emptyTile = [3, 3];
+        addHoverPiece();
 
         function findNeighborElem() {
+            removeHoverPiece();
             row = parseInt(this.dataset.row);
             column = parseInt(this.dataset.column);
             let top = [row - 1, column];
@@ -58,13 +99,16 @@ window.onload =
                 moved = true;
             }
 
-            if (moved = true) {
+            if (moved) {
                 let old = [parseInt(this.dataset.row), parseInt(this.dataset.column)];
-                row = emptyTile[0];
-                column = emptyTile[1];
 
-                emptyTile[0] = old[0];
-                emptyTile[1] = old[1];
+                this.dataset.row = emptyTile[0];
+                this.dataset.column = emptyTile[1];
+
+                matrix[emptyTile[0]][emptyTile[1]] = this;
+                matrix[old[0]][old[1]] = null;
+                emptyTile = [row, column];
+                addHoverPiece();
 
             }
 
