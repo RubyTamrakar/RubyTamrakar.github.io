@@ -26,12 +26,12 @@
             choiceSelector.change(function() {
                 let val = $(this).val();
                 $.ajax({
-                    url: "https://rubytamrakar.github.io/Assignment.html" + val,
+                    url: "https://rubytamrakar.github.io/" + val,
                     type: 'GET',
                     success: function(response) {
                         outputArea.val(response);
                     },
-                    error: function(failed) {
+                    error: function(error) {
                         console.log(error)
                     },
 
