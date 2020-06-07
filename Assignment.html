@@ -26,7 +26,7 @@
             choiceSelector.change(function() {
                 let val = $(this).val();
                 $.ajax({
-                    url: "" + val,
+                    url: "https://rubytamrakar.github.io/Assignment.html" + val,
                     type: 'GET',
                     success: function(response) {
                         outputArea.val(response);
